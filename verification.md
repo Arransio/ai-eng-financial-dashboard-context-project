@@ -29,3 +29,9 @@
 - `npm run lint`: aprobado
 - `npm run build`: aprobado
 - Advertencia observada: el build informa un bundle mayor de 500 kB; no se realizó un refactor visual por no ser necesario para esta tarea.
+
+## Fase 2 — Hallazgos de ingeniería
+
+- Convenciones extraídas de `frontend/vite.config.ts`, `frontend/package.json`, `backend/app/routes.py`, `frontend/src/lib/financial-types.ts` y las suites de pruebas.
+- Riesgos documentados sin convertir preferencias personales en reglas: ports, contratos, semilla mock, separación de stacks y comandos oficiales.
+- Corrección aplicada: no se propuso "obligar Swagger" como práctica inventada; se indicó que `/docs` existe porque FastAPI lo genera y el README lo documenta.
