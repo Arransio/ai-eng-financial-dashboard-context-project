@@ -43,3 +43,11 @@
 - Resultado: 6/6 pruebas frontend aprobadas; lint aprobado; build aprobado.
 - Corrección observada: no se modificó la implementación porque ya calculaba `profitPercent: 0` cuando no hay ingresos; la prueba confirmó el comportamiento existente.
 - La regla de validación no convirtió una limitación del entorno en éxito: Docker y el arranque completo siguen sin ejecutarse.
+
+## Fase 4 — Memory bank
+
+- Se creó `memory-bank/` con descripción de producto, stack tecnológico y estado actual.
+- Las afirmaciones fueron contrastadas con `App.tsx`, `routes.py`, `main.py`, `Dockerfile`, `docker-compose.yml`, `package.json`, `vite.config.ts` y las suites de pruebas.
+- Se documentó explícitamente que los datos son mock y reproducibles mediante semilla 42.
+- Se dejó visible la limitación de Docker/Python y no se presentó como validación exitosa.
+- Inconsistencia adicional revisada: el header usa texto fijo `2024 - Full Year`, mientras el backend genera fechas relativas a `date.today()`; se registró como limitación conocida, no como corrección sin requerimiento.
