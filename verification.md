@@ -35,3 +35,11 @@
 - Convenciones extraídas de `frontend/vite.config.ts`, `frontend/package.json`, `backend/app/routes.py`, `frontend/src/lib/financial-types.ts` y las suites de pruebas.
 - Riesgos documentados sin convertir preferencias personales en reglas: ports, contratos, semilla mock, separación de stacks y comandos oficiales.
 - Corrección aplicada: no se propuso "obligar Swagger" como práctica inventada; se indicó que `/docs` existe porque FastAPI lo genera y el README lo documenta.
+
+## Fase 3 — Reglas probadas
+
+- Se añadieron tres reglas en `.agents/rules/`, todas ancladas a archivos reales del repositorio.
+- Prueba pequeña real: se añadió una expectativa de Vitest para el caso mensual sin ingresos.
+- Resultado: 6/6 pruebas frontend aprobadas; lint aprobado; build aprobado.
+- Corrección observada: no se modificó la implementación porque ya calculaba `profitPercent: 0` cuando no hay ingresos; la prueba confirmó el comportamiento existente.
+- La regla de validación no convirtió una limitación del entorno en éxito: Docker y el arranque completo siguen sin ejecutarse.
